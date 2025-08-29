@@ -1,7 +1,7 @@
 
 # Fake News Detection on Threads
 
-This repository contains the complete implementation of our **Fake News Detection** pipeline using data scraped from Meta's **Threads** platform. The project encompasses end-to-end processing — from data collection and preprocessing to model training and evaluation, addressing the challenge of **fake news classification** using advanced NLP and machine learning techniques.
+This repository contains the complete implementation of our **Fake News Detection** pipeline using data scraped from Meta's **Threads** platform. The project encompasses end-to-end processing — from data collection and preprocessing to model training and evaluation, addressing the challenge of **fake news classification** using advanced NLP, machine learning and deep learning techniques.
 
 ## Project Overview
 
@@ -12,7 +12,7 @@ The rapid spread of misinformation on social media, especially on emerging platf
 - The analysis revealed distinct patterns in engagement, posting times, sentiment and bot behavior analysis.
 - Preprocessing text for machine learning.
 - Handling **class imbalance** using **LLM-generated synthetic samples**.
-- Employing traditional ML models and boosting techniques.
+- Employing traditional ML models and transformer based techniques.
 
 
 ## Installation
@@ -93,9 +93,10 @@ A CSV file named `FakeThreads.csv` will be saved with:
 
 Files:
 - `FakeThreads.csv`: Original scraped data from Threads.
-- `Cleaned_NewThreadsData_Labeled.csv`: Cleaned and annotated dataset.
+- `Cleaned_NewThreadsData_Labeled.csv`: Cleaned Original scraped and annotated dataset.
 - `Embedded_Cleaned_UnbalancedData.csv`: Dataset after converting post text to embeddings.
 - `balanced_dataset_with_T5Large.csv`: Balanced dataset by inserting LLM-generated fake samples.
+- `Cleaned_balanced_dataset.csv`: Cleaned balanced dataset.
 - `Embedded_Data_after_Balancing.csv`: Embeddings generated on Balanced dataset.
 
 
@@ -114,7 +115,7 @@ Files:
 - Use LLM (FLAN-T5) to generate realistic fake posts.
 
 ### 4. Model Training
-- Train and evaluate ML models (Random Forest, XGBoost, etc.).
+- Train and evaluate ML and transformer based models (Random Forest, XGBoost, roberta-base etc.).
 
 ### 5. Evaluation
 - Evaluate using accuracy, precision, recall, and F1-score.
@@ -123,7 +124,7 @@ Files:
 
 - **Embeddings**: Sentence-BERT (`all-mpnet-base-v2`)
 - **Data Augmentation**: FLAN-T5 for fake news generation
-- **Classifiers**: Naïve Bayes, Random Forest, XGBoost, LightGBM, AdaBoost
+- **Classifiers**: Naïve Bayes, Random Forest, XGBoost, LightGBM, AdaBoost, roberta-base, vinai/bertweet-base, microsoft/deberta-v3-base
 
 ## Contributing
 

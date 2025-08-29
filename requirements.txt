@@ -12,3 +12,8 @@ xgboost
 lightgbm
 torch
 tqdm
+peft
+accelerate
+bitsandbytes
+datasets
+evaluate
